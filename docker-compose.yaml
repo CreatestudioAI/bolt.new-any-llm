@@ -9,6 +9,7 @@ services:
       - "5173:5173"
     env_file: ".env.local"
     environment:
+      - NODE_OPTIONS=--max-old-space-size=8192
       - NODE_ENV=production
       - COMPOSE_PROFILES=production
       # No strictly needed but serving as hints for Coolify
